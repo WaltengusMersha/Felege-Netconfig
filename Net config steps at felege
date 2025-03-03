@@ -1,0 +1,13 @@
+1-Network design and beatufication
+2-Basic setting to all devices plus ssh on the router and L3 switches
+3-VLANs assignment plus all access and trunk ports on L2 and L3 switches
+4-Subnetting and ip addressing
+5-OSPF on the rputers and L3 switches
+6-Static ip address to serverroom devices
+7-DHCP server device configuration
+8-Inter-VLAN routing on the L3 switches plus ip dhcp helper addresses
+9-Wireless network configuration
+10-Site-to-site IPsecc VPN
+11-Defualt static route
+12-PAT + Access Control List
+13-Verfing and tasting configuration

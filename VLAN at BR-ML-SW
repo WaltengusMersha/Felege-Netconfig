@@ -1,0 +1,11 @@
+vlan 70
+vlan 80
+vlan 90
+vlan 100
+vlan 100
+vlan 120
+ex
+interface range g1/0/2-7
+switchport mode trunk
+do wr
+exit

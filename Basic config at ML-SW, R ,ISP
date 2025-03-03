@@ -1,0 +1,19 @@
+enable
+config ter
+hostname SAFARICOM-ISP
+enable password cisco
+banner motd #--------------DOT ACCESS WITH OUT PERMISSION--------#
+no ip domain lookup
+line console 0
+password cisco
+login
+exit
+service password-encryption
+username cisco password cisco
+ip domain-name cisco.com
+crypto key generate rsa 1024
+line vty 0 15
+transport input ssh
+login local
+do wr
+

@@ -1,0 +1,12 @@
+enable
+config ter
+hostname SS-SW
+enable password cisco
+banner motd #--------------DO`T ACCESS WITH OUT PERMISSION--------#
+no ip domain lookup
+line console 0
+password cisco
+login
+exit
+service password-encryption
+do wr

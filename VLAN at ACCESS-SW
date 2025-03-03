@@ -1,0 +1,11 @@
+vlan 120
+name BR
+
+interface range f0/1-2
+switchport mode trunk
+ex
+interface range f0/3-24
+switchport mode access 
+switchport access vlan 120
+do wr
+
