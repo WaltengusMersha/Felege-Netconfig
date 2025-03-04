@@ -2,7 +2,7 @@ vlan 70
 vlan 80
 vlan 90
 vlan 100
-vlan 100
+vlan 110
 vlan 120
 ex
 interface range g1/0/2-7

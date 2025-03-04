@@ -1,0 +1,21 @@
+interface serial 0/0/0
+ip nat OUTSIDE
+ex
+interface serial 0/0/1
+ip nat OUTSIDE
+ex
+interface range gig0/0-1
+ip nat INSIDE
+ex
+
+ip nat Inside source list 1 interface serial 0/0/0 overload 
+ip nat Inside source list 1 interface serial 0/0/1 overload 
+
+access-list 1 permit 192.168.101.128 0.0.0.31
+access-list 1 permit 192.168.101.160 0.0.0.31
+access-list 1 permit 192.168.101.192 0.0.0.31
+access-list 1 permit 192.168.101.224 0.0.0.31
+access-list 1 permit 192.168.102.0 0.0.0.31
+access-list 1 permit 192.168.102.32 0.0.0.31
+do wr
+
