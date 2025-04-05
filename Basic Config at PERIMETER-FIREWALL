@@ -1,0 +1,6 @@
+config ter
+hostname PERIMETER-FIREWALL
+enable password cisco
+login
+exit
+wr m
