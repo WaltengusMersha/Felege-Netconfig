@@ -29,5 +29,10 @@ ip address 192.168.101.65 255.255.255.192
 ip helper-address 192.168.102.67
 ex
 
+interface vlan 130
+ip address 192.168.102.65 255.255.255.240
+ip helper-address 192.168.102.67
+ex
+
 do wr
 
