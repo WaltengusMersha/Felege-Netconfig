@@ -4,8 +4,9 @@ vlan 30
 vlan 40
 vlan 50
 vlan 60
+vlan 130
 ex
-interface range g1/0/2-7
+interface range g1/0/2-8
 switchport mode trunk
 do wr
 exit
