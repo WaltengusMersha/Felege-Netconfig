@@ -1,4 +1,5 @@
 router ospf 10
+router-id 1.1.6.6
 network 195.168.17.8 0.0.0.3 area 0
 do wr
 

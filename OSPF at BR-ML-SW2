@@ -1,5 +1,6 @@
 ip routing 
 router ospf 10
+router-id 1.1.9.9
 network 192.168.101.128 0.0.0.31 area 0
 network 192.168.101.160 0.0.0.31 area 0
 network 192.168.101.192 0.0.0.31 area 0
