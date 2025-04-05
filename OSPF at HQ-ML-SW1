@@ -7,6 +7,7 @@ network 192.168.100.192 0.0.0.63 area 0
 network 192.168.101.0 0.0.0.63 area 0
 network 192.168.101.64 0.0.0.63 area 0
 network 192.168.102.80 0.0.0.3 area 0
+network 192.168.102.64 0.0.0.15 area 0
 exit
 ip route 0.0.0.0 0.0.0.0 192.168.102.82
 do wr
