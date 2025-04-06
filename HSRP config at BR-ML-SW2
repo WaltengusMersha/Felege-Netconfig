@@ -1,0 +1,65 @@
+vlan 70
+name NSO
+vlan 80
+name HL
+vlan 90
+name HR
+vlan 100
+name MK
+vlan 110
+name FIN
+vlan 120
+name GWA
+ex
+interface range g1/0/2-7
+switchport mode trunk
+do wr
+exit
+
+interface vlan 70
+ip address 192.168.101.131 255.255.255.224
+ip helper-address 192.168.102.67
+standby 70 ip 192.168.100.129
+standby 70 priority 100
+standby 70 preempt
+exit
+
+interface vlan 80
+ip address 192.168.101.163 255.255.255.224
+ip helper-address 192.168.102.67
+standby 80 ip 192.168.100.161
+standby 80 priority 100
+standby 80 preempt
+exit
+
+interface vlan 90
+ip address 192.168.101.195 255.255.255.224
+ip helper-address 192.168.102.67
+standby 90 ip 192.168.100.193
+standby 90 priority 100
+standby 90 preempt
+exit
+
+interface vlan 100
+ip address 192.168.101.227 255.255.255.224
+ip helper-address 192.168.102.67
+standby 100 ip 192.168.100.225
+standby 100 priority 100
+standby 100 preempt
+exit
+
+interface vlan 110
+ip address 192.168.102.3 255.255.255.224
+ip helper-address 192.168.102.67
+standby 110 ip 192.168.102.1
+standby 110 priority 100
+standby 110 preempt
+exit
+
+interface vlan 120
+ip address 192.168.102.35 255.255.255.224
+ip helper-address 192.168.102.67
+standby 120 ip 192.168.102.33
+standby 120 priority 100
+standby 120 preempt
+exit
