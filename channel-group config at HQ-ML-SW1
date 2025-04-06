@@ -1,0 +1,8 @@
+interface range g1/0/9-11
+channel-group 1 mode active
+interface Port-channel 1
+switchport mode trunk
+exit 
+do write
+
+
