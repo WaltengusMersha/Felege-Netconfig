@@ -1,0 +1,39 @@
+interface g1/1
+nameif INSIDE
+security-level 100
+ex
+
+interface g1/2
+nameif INSIDES
+security-level 100
+ex
+
+interface g1/3
+nameif OUTSIDE
+security-level 0
+ex
+
+interface g1/4
+nameif OUTSIDES
+security-level 0
+ex
+
+object network INSIDE-OUTSIDE
+subnet 192.168.0.0 255.255.0.0
+nat (INSIDE,OUTSIDE) dynamic interface
+
+
+object network INSIDE-OUTSIDES
+subnet 192.168.0.0 255.255.0.0
+nat (INSIDE,OUTSIDES) dynamic interface
+
+
+object network INSIDES-OUTSIDE
+subnet 192.168.0.0 255.255.0.0
+nat (INSIDES,OUTSIDE) dynamic interface
+
+
+object network INSIDES-OUTSIDES
+subnet 192.168.0.0 255.255.0.0
+nat (INSIDES,OUTSIDES) dynamic interface
+
