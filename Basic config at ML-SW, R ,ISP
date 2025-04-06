@@ -1,6 +1,5 @@
-enable
 config ter
-hostname SAFARICOM-ISP
+hostname PERIMETER_FIREWALL
 enable password cisco
 banner motd #--------------DOT ACCESS WITH OUT PERMISSION--------#
 no ip domain lookup
