@@ -1,0 +1,73 @@
+vlan 10
+name MLOCS
+vlan 20
+name MER
+vlan 30
+name MRM
+vlan 40
+name IT
+vlan 50
+name CS
+vlan 60
+vlan 130
+name SS
+ex
+interface range g1/0/2-8
+switchport mode trunk
+do wr
+exit
+
+interface vlan 10
+ip address 192.168.100.2 255.255.255.192
+ip helper-address 192.168.102.67
+standby 10 ip 192.168.100.1
+standby 10 priority 150
+standby 10 preempt
+exit
+
+interface vlan 20
+ip address 192.168.100.66 255.255.255.192
+ip helper-address 192.168.102.67
+standby 20 ip 192.168.100.65
+standby 20 priority 150
+standby 20 preempt
+exit
+
+interface vlan 30
+ip address 192.168.100.130 255.255.255.192
+ip helper-address 192.168.102.67
+standby 30 ip 192.168.100.129
+standby 30 priority 150
+standby 30 preempt
+exit
+
+interface vlan 40
+ip address 192.168.100.194 255.255.255.192
+ip helper-address 192.168.102.67
+standby 40 ip 192.168.100.193
+standby 40 priority 150
+standby 40 preempt
+exit
+
+interface vlan 50
+ip address 192.168.101.2 255.255.255.192
+ip helper-address 192.168.102.67
+standby 50 ip 192.168.101.1
+standby 50 priority 150
+standby 50 preempt
+exit
+
+interface vlan 60
+ip address 192.168.101.66 255.255.255.192
+ip helper-address 192.168.102.67
+standby 60 ip 192.168.101.65
+standby 60 priority 150
+standby 60 preempt
+exit
+
+interface vlan 130
+ip address 192.168.102.66 255.255.255.240
+standby 130 ip 192.168.102.65
+standby 130 priority 150
+standby 130 preempt
+exit
