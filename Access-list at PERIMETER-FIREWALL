@@ -1,0 +1,31 @@
+access-list INSIDE-OUTSIDE permit icmp any any
+access-list INSIDE-OUTSIDES permit icmp any any
+access-list INSIDES-OUTSIDE permit icmp any any
+access-list INSIDES-OUTSIDES permit icmp any any
+
+access-list INSIDE-OUTSIDE permit udp any any eq 53
+access-list INSIDE-OUTSIDES permit udp any any eq 53
+access-list INSIDES-OUTSIDE permit udp any any eq 53
+access-list INSIDES-OUTSIDES permit udp any any eq 53
+
+access-list INSIDE-OUTSIDE permit tcp any any eq 53
+access-list INSIDE-OUTSIDES permit tcp any any eq 53
+access-list INSIDES-OUTSIDE permit tcp any any eq 53
+access-list INSIDES-OUTSIDES permit tcp any any eq 53
+
+access-list INSIDE-OUTSIDE permit tcp any any eq 80
+access-list INSIDE-OUTSIDES permit tcp any any eq 80
+access-list INSIDES-OUTSIDE permit tcp any any eq 80
+access-list INSIDES-OUTSIDES permit tcp any any eq 80
+
+access-list INSIDE-OUTSIDE permit tcp any any eq 443
+access-list INSIDE-OUTSIDES permit tcp any any eq 443
+access-list INSIDES-OUTSIDE permit tcp any any eq 443
+access-list INSIDES-OUTSIDES permit tcp any any eq 443
+
+access-group INSIDE-OUTSIDE in interface OUTSIDE
+access-group INSIDE-OUTSIDES in interface OUTSIDE
+access-group INSIDES-OUTSIDE in interface OUTSIDE
+access-group INSIDES-OUTSIDES in interface OUTSIDE
+
+wr mem
